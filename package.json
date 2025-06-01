@@ -8,8 +8,18 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": "",
   "dependencies": {
-    "express": "^5.1.0"
-  }
+    "ejs": "^3.1.10",
+    "express": "^5.1.0",
+    "express-session": "^1.18.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MichaelLin2021/Synoptic-Project.git"
+  },
+  "bugs": {
+    "url": "https://github.com/MichaelLin2021/Synoptic-Project/issues"
+  },
+  "homepage": "https://github.com/MichaelLin2021/Synoptic-Project#readme",
+  "description": ""
 }
