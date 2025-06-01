@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-mongoose.connect('your-mongo-uri-here', {
+mongoose.connect('mongodb://localhost:27017/trash2cash', {
   useNewUrlParser: true,
   useUnifiedTopology: true
 }).then(() => {
@@ -8,7 +8,6 @@ mongoose.connect('your-mongo-uri-here', {
 }).catch(err => {
   console.error('MongoDB connection error:', err);
 });
-
 
 const express = require('express');
 const path = require('path');

@@ -3,21 +3,36 @@ const bcrypt = require('bcrypt');
 const User = require('../models/user');
 const router = express.Router();
 
-router.get('/register', (req, res) => {
-  res.render('register');
+router.get('/login', (req, res) => {
+  res.render('login'); 
 });
 
-router.post('/register', async (req, res) => {
+router.post('/login', async (req, res) => {
   const { username, password } = req.body;
 
-  const hashed = await bcrypt.hash(password, 10);
   try {
-    const user = new User({ username, password: hashed });
-    await user.save();
-    res.send('Registered! <a href="/login">Login</a>');
+    const user = await User.findOne({ username });
+    if (!user) {
+      return res.send('User not found. <a href="/login">Try again</a>');
+    }
+
+    const isMatch = await bcrypt.compare(password, user.password);
+    if (!isMatch) {
+      return res.send('Incorrect password. <a href="/login">Try again</a>');
+    }
+
+    req.session.username = user.username;
+    res.redirect('/');
   } catch (err) {
-    res.send('Registration failed. Try another username.');
+    console.error(err);
+    res.send('Something went wrong. <a href="/login">Try again</a>');
   }
+});
+
+router.get('/logout', (req, res) => {
+  req.session.destroy(() => {
+    res.redirect('/');
+  });
 });
 
 module.exports = router;
