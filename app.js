@@ -1,3 +1,15 @@
+const mongoose = require('mongoose');
+
+mongoose.connect('your-mongo-uri-here', {
+  useNewUrlParser: true,
+  useUnifiedTopology: true
+}).then(() => {
+  console.log('Connected to MongoDB');
+}).catch(err => {
+  console.error('MongoDB connection error:', err);
+});
+
+
 const express = require('express');
 const path = require('path');
 
