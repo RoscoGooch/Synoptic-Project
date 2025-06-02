@@ -81,3 +81,11 @@ ul {
 ul li button {
   margin: 10px 0;
 }
+
+.user-label {
+  color: white;
+  padding: 6px 10px;
+  margin-left: 15px;
+  display: inline-block;
+  font-weight: 500;
+}

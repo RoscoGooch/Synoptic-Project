@@ -7,18 +7,19 @@
 <body>
 
   <div class="navbar">
-    <div class="logo">Trash2Cash</div>
-    <div class="nav-links">
-      <% if (username) { %>
-        <span>Welcome, <%= username %></span>
-        <a href="/dashboard">Dashboard</a>
-        <a href="/logout">Logout</a>
-      <% } else { %>
-        <a href="/login">Login</a>
-        <a href="/register">Register</a>
-      <% } %>
-    </div>
+  <div class="logo">Trash2Cash</div>
+  <div class="nav-links">
+    <% if (username) { %>
+      <span class="user-label">Welcome, <strong><%= username %></strong></span>
+      <a href="/dashboard">Dashboard</a>
+      <a href="/logout">Logout</a>
+    <% } else { %>
+      <a href="/login">Login</a>
+      <a href="/register">Register</a>
+    <% } %>
   </div>
+  </div>
+
 
   <div class="container">
     <h1>Welcome to Trash2Cash</h1>
