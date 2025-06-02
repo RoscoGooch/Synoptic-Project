@@ -1,7 +1,91 @@
+/* General Reset */
 body {
+  margin: 0;
   font-family: Arial, sans-serif;
-  background: #f0f8ff;
+  background-color: #f4f4f4;
   color: #333;
+}
+
+/* Navbar */
+.navbar {
+  background-color: #2d2d2d;
+  color: white;
+  padding: 12px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.nav-links {
+  display: flex;
+  gap: 15px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  padding: 6px 10px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.nav-links a:hover {
+  background-color: #444;
+}
+
+/* Container for page content */
+.container {
+  max-width: 500px;
+  margin: 40px auto;
+  background-color: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
   text-align: center;
-  padding: 40px;
+}
+
+/* Form elements */
+input,
+button {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  box-sizing: border-box;
+  font-size: 1rem;
+}
+
+button {
+  background-color: #2d2d2d;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+button:hover {
+  background-color: #444;
+}
+
+/* Dashboard buttons list */
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+ul li button {
+  margin: 10px 0;
+}
+
+.user-label {
+  color: white;
+  padding: 6px 10px;
+  margin-left: 15px;
+  display: inline-block;
+  font-weight: 500;
 }

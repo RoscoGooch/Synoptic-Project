@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dashboard - Trash2Cash</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="logo">Trash2Cash</div>
+    <div class="nav-links">
+      <a href="/">Home</a>
+      <a href="/dashboard">Dashboard</a>
+      <a href="/logout">Logout</a>
+    </div>
+  </nav>
+
+  <div class="container">
+    <h2>Welcome, <%= username %>!</h2>
+    <p>Select an action:</p>
+    
+    <ul style="list-style: none; padding: 0;">
+      <li><button onclick="location.href='/log-waste'">Log Recyclable Items</button></li>
+      <li><button onclick="location.href='/upload'">Upload Photo</button></li>
+      <li><button onclick="location.href='/rewards'">View Rewards</button></li>
+    </ul>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Trash2Cash - Home</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+  <div class="navbar">
+  <div class="logo">Trash2Cash</div>
+  <div class="nav-links">
+    <% if (username) { %>
+      <span class="user-label">Welcome, <strong><%= username %></strong></span>
+      <a href="/dashboard">Dashboard</a>
+      <a href="/logout">Logout</a>
+    <% } else { %>
+      <a href="/login">Login</a>
+      <a href="/register">Register</a>
+    <% } %>
+  </div>
+  </div>
+
+
+  <div class="container">
+    <h1>Welcome to Trash2Cash</h1>
+    <p>
+      Recycle items. Earn points. Redeem rewards.
+    </p>
+
+    <% if (username) { %>
+      <p>You are logged in as <strong><%= username %></strong>.</p>
+    <% } else { %>
+      <p><a href="/login">Log in</a> to start tracking your recycling!</p>
+    <% } %>
+  </div>
+
+</body>
+</html>
