@@ -5,20 +5,55 @@
   <link rel="stylesheet" href="/style.css">
 </head>
 <body>
-  <div class="navbar">
-    <div class="logo">Trash2Cash</div>
-    <div class="nav-links">
-      <a href="/login">Login</a>
-      <a href="/register">Register</a>
+  <nav class="navbar">
+    <div class="nav-left">
+      <div class="logo">Trash2Cash</div>
+      <div class="nav-links" id="navMenu">
+        <a href="/">Home</a>
+        <% if (username) { %>
+          <a href="/dashboard">Dashboard</a>
+          <a href="/log-waste">Log Recycle Items</a>
+          <a href="/upload">Upload Photo</a>
+          <a href="/rewards">View Rewards</a>
+        <% } else { %>
+          <a href="/login">Log Recycle Items</a>
+          <a href="/login">Upload Photo</a>
+          <a href="/login">View Rewards</a>
+        <% } %>
+      </div>
     </div>
-  </div>
+
+    <div class="nav-right">
+      <% if (username) { %>
+        <div class="dropdown">
+          <span class="dropbtn">Welcome, <%= username %> ⌄</span>
+          <div class="dropdown-content">
+            <a href="/dashboard">Dashboard</a>
+            <a href="/logout">Logout</a>
+          </div>
+        </div>
+      <% } else { %>
+        <a href="/login">Login</a>
+        <a href="/register">Register</a>
+      <% } %>
+    </div>
+  </nav>
+
+  <!-- Registration Form -->
   <div class="container">
     <h2>Register</h2>
     <form action="/register" method="POST">
-      <input type="text" name="username" placeholder="Username" required><br>
-      <input type="password" name="password" placeholder="Password" required><br>
+      <input type="text" name="username" placeholder="Username" required>
+      <input type="password" name="password" placeholder="Password" required>
       <button type="submit">Register</button>
     </form>
   </div>
+
+  <script>
+    function toggleMenu() {
+      const nav = document.getElementById('navMenu');
+      nav.classList.toggle('show');
+    }
+  </script>
 </body>
 </html>
