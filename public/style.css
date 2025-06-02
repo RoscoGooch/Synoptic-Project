@@ -1,7 +1,9 @@
+/* General Reset */
 body {
   margin: 0;
   font-family: Arial, sans-serif;
   background-color: #f4f4f4;
+  color: #333;
 }
 
 /* Navbar */
@@ -19,45 +21,61 @@ body {
   font-weight: bold;
 }
 
+.nav-links {
+  display: flex;
+  gap: 15px;
+}
+
 .nav-links a {
   color: white;
   text-decoration: none;
-  margin-left: 15px;
   padding: 6px 10px;
   border-radius: 4px;
-  transition: background-color 0.3s;
+  transition: background-color 0.3s ease;
 }
 
 .nav-links a:hover {
   background-color: #444;
 }
 
-/* Container for content */
+/* Container for page content */
 .container {
   max-width: 500px;
   margin: 40px auto;
-  background: white;
+  background-color: white;
   padding: 30px;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  text-align: center;
 }
 
-input, button {
+/* Form elements */
+input,
+button {
   width: 100%;
   padding: 10px;
   margin-top: 10px;
   box-sizing: border-box;
+  font-size: 1rem;
 }
 
 button {
   background-color: #2d2d2d;
   color: white;
   border: none;
+  border-radius: 5px;
   cursor: pointer;
+  transition: background-color 0.2s ease;
 }
 
 button:hover {
   background-color: #444;
+}
+
+/* Dashboard buttons list */
+ul {
+  list-style: none;
+  padding: 0;
 }
 
 ul li button {
