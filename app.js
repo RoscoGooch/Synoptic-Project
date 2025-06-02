@@ -40,9 +40,7 @@ app.use(express.urlencoded({ extended: true }));
 app.engine('html', require('ejs').renderFile);
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'html');
-// Use EJS templates
-app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'ejs');
+
 // Routes
 const indexRouter = require('./routes/index');
 app.use('/', indexRouter);
