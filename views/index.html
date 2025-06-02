@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Home</title>
+  <title>Trash2Cash - Home</title>
+  <link rel="stylesheet" href="/style.css">
 </head>
 <body>
 
-    <div class="navbar">
+  <div class="navbar">
     <div class="logo">Trash2Cash</div>
     <div class="nav-links">
       <a href="/login">Login</a>
@@ -13,14 +14,16 @@
     </div>
   </div>
 
-   <div class="container">
-  <% if (username) { %>
-    <h2>Welcome, <%= username %>!</h2>
-    <a href="/logout">Logout</a>
-  <% } else { %>
-    <h2>Welcome, guest!</h2>
-    <a href="/login">Login</a>
-  <% } %>
+  <div class="container">
+    <h1>Welcome to Trash2Cash</h1>
+    <p>
+      Turn your trash into rewards! Recycle responsibly and earn points that you can exchange for useful items.
+    </p>
+
+    <p style="margin-top: 20px;">
+      <a href="/login"><button>Get Started</button></a>
+    </p>
   </div>
+
 </body>
 </html>
