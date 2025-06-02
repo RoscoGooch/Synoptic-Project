@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Home</title>
+</head>
+<body>
+  <% if (username) { %>
+    <h2>Hello, <%= username %>!</h2>
+    <a href="/dashboard">Go to Dashboard</a><br>
+    <a href="/logout">Logout</a>
+  <% } else { %>
+    <h2>Welcome to Trash2Cash</h2>
+    <a href="/login">Login</a> |
+    <a href="/register">Register</a>
+  <% } %>
+</body>
+</html>
