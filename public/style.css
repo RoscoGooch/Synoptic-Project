@@ -1,7 +1,38 @@
 body {
+  margin: 0;
   font-family: Arial, sans-serif;
-  background: #f0f8ff;
-  color: #333;
-  text-align: center;
-  padding: 40px;
+}
+
+/* Navbar */
+.navbar {
+  background-color: #2d2d2d;
+  padding: 10px 20px;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Logo/title */
+.navbar .logo {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+
+.navbar .nav-links {
+  display: flex;
+  gap: 15px;
+}
+
+.navbar .nav-links a {
+  color: white;
+  text-decoration: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+}
+
+.navbar .nav-links a:hover {
+  background-color: #555;
 }
