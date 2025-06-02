@@ -1,72 +1,64 @@
 body {
-  font-family: Arial, sans-serif;
   margin: 0;
-  padding: 0;
-  background: #f4f4f4;
-  color: #333;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
 }
 
+/* Navbar */
 .navbar {
-  background-color: #28a745;
+  background-color: #2d2d2d;
   color: white;
-  padding: 1rem 2rem;
+  padding: 12px 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.navbar .logo {
-  font-size: 1.5rem;
+.logo {
+  font-size: 22px;
   font-weight: bold;
-}
-
-.nav-links {
-  list-style: none;
-  display: flex;
-  gap: 1rem;
-}
-
-.nav-links li {
-  display: inline;
 }
 
 .nav-links a {
   color: white;
   text-decoration: none;
-  font-weight: 500;
+  margin-left: 15px;
+  padding: 6px 10px;
+  border-radius: 4px;
+  transition: background-color 0.3s;
 }
 
-.dashboard-container {
-  padding: 2rem;
-  text-align: center;
+.nav-links a:hover {
+  background-color: #444;
 }
 
-.dashboard-container h1 {
-  font-size: 2rem;
-  color: #333;
+/* Container for content */
+.container {
+  max-width: 500px;
+  margin: 40px auto;
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
-.dashboard-actions {
-  margin-top: 2rem;
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  align-items: center;
+input, button {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  box-sizing: border-box;
 }
 
-.btn {
-  background-color: #28a745;
+button {
+  background-color: #2d2d2d;
   color: white;
-  text-decoration: none;
-  padding: 0.8rem 2rem;
-  border-radius: 5px;
-  transition: background-color 0.2s ease;
+  border: none;
+  cursor: pointer;
 }
 
-.btn:hover {
-  background-color: #218838;
+button:hover {
+  background-color: #444;
 }
-
 
 ul li button {
   margin: 10px 0;

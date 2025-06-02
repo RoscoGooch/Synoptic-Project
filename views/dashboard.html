@@ -6,24 +6,26 @@
   <link rel="stylesheet" href="/style.css">
 </head>
 <body>
+
   <nav class="navbar">
     <div class="logo">Trash2Cash</div>
-    <ul class="nav-links">
-      <li><a href="/">Home</a></li>
-      <li><a href="/dashboard">Dashboard</a></li>
-      <li><a href="/logout">Logout</a></li>
-    </ul>
+    <div class="nav-links">
+      <a href="/">Home</a>
+      <a href="/dashboard">Dashboard</a>
+      <a href="/logout">Logout</a>
+    </div>
   </nav>
 
-  <main class="dashboard-container">
-    <h1>Welcome, <%= username %>!</h1>
-    <p>This is your personal dashboard. Choose an action below:</p>
+  <div class="container">
+    <h2>Welcome, <%= username %>!</h2>
+    <p>Select an action:</p>
+    
+    <ul style="list-style: none; padding: 0;">
+      <li><button onclick="location.href='/log-waste'">Log Recyclable Items</button></li>
+      <li><button onclick="location.href='/upload'">Upload Photo</button></li>
+      <li><button onclick="location.href='/rewards'">View Rewards</button></li>
+    </ul>
+  </div>
 
-    <div class="dashboard-actions">
-      <a href="/log-waste" class="btn">Log Recyclable Items</a>
-      <a href="/rewards" class="btn">View & Redeem Rewards</a>
-      <a href="/upload" class="btn">Upload Waste Photo</a>
-    </div>
-  </main>
 </body>
 </html>
