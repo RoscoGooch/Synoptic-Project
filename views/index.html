@@ -4,7 +4,7 @@
   <title>Home</title>
 </head>
 <body>
-  
+
     <div class="navbar">
     <div class="logo">Trash2Cash</div>
     <div class="nav-links">
@@ -12,6 +12,8 @@
       <a href="/register">Register</a>
     </div>
   </div>
+
+   <div class="container">
   <% if (username) { %>
     <h2>Welcome, <%= username %>!</h2>
     <a href="/logout">Logout</a>
@@ -19,6 +21,6 @@
     <h2>Welcome, guest!</h2>
     <a href="/login">Login</a>
   <% } %>
-  
+  </div>
 </body>
 </html>
