@@ -18,7 +18,7 @@ const session = require('express-session');
 
 // Set up session middleware
 app.use(session({
-  secret: 'your-secret-key', // change this!
+  secret: 'mySuperSecretKey123!@#', // if anyone want change this please do
   resave: false,
   saveUninitialized: true
 }));
@@ -36,7 +36,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 // Parse HTML form data
 app.use(express.urlencoded({ extended: true }));
 
-// Use HTML files as views
+
 app.engine('html', require('ejs').renderFile);
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
