@@ -22,7 +22,8 @@ router.post('/login', async (req, res) => {
     }
 
     req.session.username = user.username;
-    res.redirect('/');
+    res.redirect('/dashboard');
+
   } catch (err) {
     console.error(err);
     res.send('Something went wrong. <a href="/login">Try again</a>');
@@ -31,7 +32,7 @@ router.post('/login', async (req, res) => {
 
 router.get('/logout', (req, res) => {
   req.session.destroy(() => {
-    res.redirect('/');
+    res.redirect('index');
   });
 });
 

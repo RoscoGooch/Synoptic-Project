@@ -51,6 +51,8 @@ app.use('/', loginRouter);
 const registerRouter = require('./routes/register');
 app.use('/', registerRouter);
 
+const dashboardRouter = require('./routes/dashboard');
+app.use('/dashboard', dashboardRouter);
 
 // Start server
 const PORT = 3000;
